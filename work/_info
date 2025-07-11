@@ -1,0 +1,274 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/questasim64_10.6c/examples
+T_opt
+!s110 1694164449
+V_M52A>OWT0:j:=_aU`YnK1
+Z1 04 6 4 work tb_Top fast 0
+=1-d8bbc1b3534e-64fae5e0-1be-3208
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.6c;65
+R0
+T_opt1
+!s110 1694003376
+VYf3NAYE68HfjSiW]lHC<h3
+R1
+=1-d8bbc1b3534e-64f870b0-2d7-2108
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+R0
+valu
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 RknDL=Vd7HWA^<zS9l9mn0
+I=4ZKlHzmkaVV@7a3_?;eZ3
+Z5 dE:/verilog project/fianafinaal
+w1693933394
+8E:/verilog project/fianafinaal/alu.v
+FE:/verilog project/fianafinaal/alu.v
+L0 1
+Z6 OL;L;10.6c;65
+Z7 !s108 1694267203.000000
+!s107 E:/verilog project/fianafinaal/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/alu.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vbranch_compartor
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 Hmhe=BMbFLCh@e3@N2?oX2
+I0?hHfYQG7<ZWFB`8GF>;32
+R5
+w1693908142
+8E:/verilog project/fianafinaal/branch_compartor.v
+FE:/verilog project/fianafinaal/branch_compartor.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/branch_compartor.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/branch_compartor.v|
+!i113 0
+R8
+R2
+vcontrol_path
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 Sm:0oh5@MGFRX=A`VAUBn1
+IGIB;Jo73_g^M6IGzdfWEa0
+R5
+w1694003348
+8E:/verilog project/fianafinaal/control_path.v
+FE:/verilog project/fianafinaal/control_path.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/control_path.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/control_path.v|
+!i113 0
+R8
+R2
+vdatapath
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ?RG@[AVh?;j:VM@N?;dC:2
+IibE`OTP;n9FzVIVA3Ia?93
+R5
+w1694003252
+8E:/verilog project/fianafinaal/data_path.v
+FE:/verilog project/fianafinaal/data_path.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/data_path.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/data_path.v|
+!i113 0
+R8
+R2
+vIMEM
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 _ZoEP_JZB_Q1a31OZ4Q7Q2
+I8f8K4foG`X4Bn[=AIGDCC0
+R5
+w1694267065
+8E:/verilog project/fianafinaal/IMEM.v
+FE:/verilog project/fianafinaal/IMEM.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/IMEM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/IMEM.v|
+!i113 0
+R8
+R2
+n@i@m@e@m
+vimm_generator
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 Af6XU6Jl2VXi>g0mO7WMT3
+IVnXW]Zba3XLPmLYEfje;?0
+R5
+w1693935235
+8E:/verilog project/fianafinaal/imm_gen.v
+FE:/verilog project/fianafinaal/imm_gen.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/imm_gen.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/imm_gen.v|
+!i113 0
+R8
+R2
+vmux4x1
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 Ja<h6VcW8TWIo8XeTnoz=0
+Ij7zTNbXE_lQ1o:W_<e?K;2
+R5
+w1693915765
+8E:/verilog project/fianafinaal/mux4x1.v
+FE:/verilog project/fianafinaal/mux4x1.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/mux4x1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/mux4x1.v|
+!i113 0
+R8
+R2
+vPC
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 `RR0PGQDRM^o4Rn<Sdj:50
+I3eV;GiB2?nB>]XhZ@AU3Z3
+R5
+w1693923258
+8E:/verilog project/fianafinaal/PC.v
+FE:/verilog project/fianafinaal/PC.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/PC.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/PC.v|
+!i113 0
+R8
+R2
+n@p@c
+vram
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 AEEUFIkfdL4Pa5Z6gbOZ21
+IE237>99CB3H]^E@R1ekgj1
+R5
+w1694003620
+8E:/verilog project/fianafinaal/data_memory.v
+FE:/verilog project/fianafinaal/data_memory.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/data_memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/data_memory.v|
+!i113 0
+R8
+R2
+vregfile
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 FW:G97z9SQ6GQ1^8BaTR<0
+IEVSQAlK[O8DYn2KBSk03F3
+R5
+w1693926684
+8E:/verilog project/fianafinaal/regfile.v
+FE:/verilog project/fianafinaal/regfile.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/regfile.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/regfile.v|
+!i113 0
+R8
+R2
+vRISC_V
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 aMPG<iDSCaUL5nR7J=g:b0
+IWlZmcR8a15i10IM>ISMBS1
+R5
+w1693923597
+8E:/verilog project/fianafinaal/Top.v
+FE:/verilog project/fianafinaal/Top.v
+L0 1
+R6
+R7
+!s107 E:/verilog project/fianafinaal/Top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/Top.v|
+!i113 0
+R8
+R2
+n@r@i@s@c_@v
+vtb_Top
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 >VDieT5eVTbTRW?^DWmN^3
+IBHfEV<LG<Q:SgCm3<1kUW3
+R5
+w1693923623
+8E:/verilog project/fianafinaal/tb_TOP.v
+FE:/verilog project/fianafinaal/tb_TOP.v
+L0 2
+R6
+R7
+!s107 E:/verilog project/fianafinaal/tb_TOP.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/verilog project/fianafinaal/tb_TOP.v|
+!i113 0
+R8
+R2
+ntb_@top

@@ -1,0 +1,85 @@
+{E:/verilog project/fianafinaal/mux4x1.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/mux4x1.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module mux4x1
+
+Top level modules:
+	mux4x1
+
+} {} {}} {E:/verilog project/fianafinaal/Top.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/Top.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module RISC_V
+
+Top level modules:
+	RISC_V
+
+} {} {}} {E:/verilog project/fianafinaal/PC.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/PC.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {E:/verilog project/fianafinaal/control_path.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/control_path.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module control_path
+
+Top level modules:
+	control_path
+
+} {} {}} {E:/verilog project/fianafinaal/IMEM.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/IMEM.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module IMEM
+
+Top level modules:
+	IMEM
+
+} {} {}} {E:/verilog project/fianafinaal/tb_TOP.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/tb_TOP.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module tb_Top
+
+Top level modules:
+	tb_Top
+
+} {} {}} {E:/verilog project/fianafinaal/data_memory.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/data_memory.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} {E:/verilog project/fianafinaal/alu.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/alu.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {E:/verilog project/fianafinaal/branch_compartor.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/branch_compartor.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module branch_compartor
+
+Top level modules:
+	branch_compartor
+
+} {} {}} {E:/verilog project/fianafinaal/imm_gen.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/imm_gen.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module imm_generator
+
+Top level modules:
+	imm_generator
+
+} {} {}} {E:/verilog project/fianafinaal/data_path.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/data_path.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} {E:/verilog project/fianafinaal/regfile.v} {1 {vlog -work work -vopt -stats=none {E:/verilog project/fianafinaal/regfile.v}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}}

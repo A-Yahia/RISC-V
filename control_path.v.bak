@@ -1,0 +1,254 @@
+module control_path(instruct,brLt,brEq,pcSel,regWen,immSel,
+					brUnsigned,Bsel,Asel,ALUsel,memRW,WBsel,loadsize,storesize);
+input [31:0] instruct;
+input brEq,brLt;
+output reg pcSel,regWen,brUnsigned,Asel,Bsel,memRW;
+output reg [2:0]loadsize,immSel;
+output reg [1:0]WBsel,storesize;
+output reg [4:0]ALUsel;
+
+localparam 	rType=   5'b01100,
+			iType=   5'b00100,
+			sType=   5'b01000,
+			l=       5'b00000,
+			auipc=   5'b00101,
+			bType=   5'b11000,
+			jal= 	 5'b11011,
+			jalr=    5'b11001;
+
+localparam [2:0] beq=0,
+				 bne=1,
+				 bge=5,
+				 bgeu=7,
+				 blt=4,
+				 bltu=6;
+				 
+
+
+wire [5:0] opcode =instruct[6:2];
+wire [2:0] func3 =instruct[14:12];
+wire func7secondbit=instruct[30];
+
+
+always@(*)begin
+	pcSel=0;
+	immSel=0;
+	brUnsigned=0;
+	Asel=0;
+	Bsel=0;
+	ALUsel={func3,func7secondbit};
+	memRW=0;
+	regWen=1;
+	WBsel=1;	
+	case(opcode)
+		rType:begin
+				pcSel=0;
+				immSel=0;
+				brUnsigned=0;
+				Asel=0;
+				Bsel=0;
+				ALUsel={func3,func7secondbit};
+				memRW=0;
+				regWen=1;
+				WBsel=1;
+				loadsize=5;
+				storesize=0;	
+		end
+		iType:begin
+				pcSel=0;
+				immSel=0;
+				brUnsigned=0;
+				Asel=0;
+				Bsel=1;
+				ALUsel={func3,1'b0};
+				memRW=0;
+				regWen=1;
+				WBsel=1;
+				loadsize=5;
+				storesize=0;	
+		end
+		sType:begin
+				pcSel=0;
+				immSel=1;
+				brUnsigned=0;
+				Asel=0;
+				Bsel=1;
+				ALUsel={3'b000,1'b0};
+				memRW=1;
+				regWen=0;
+				WBsel=1;
+				loadsize=0;
+				storesize=func3;				
+		end
+		l:begin
+					pcSel=0;
+					immSel=0;
+					brUnsigned=0;
+					Asel=0;
+					Bsel=1;
+					ALUsel={3'b000,1'b0};
+					memRW=0;
+					regWen=1;
+					WBsel=0;
+					loadsize=func3;
+					storesize=0;
+		end
+		auipc:begin
+				pcSel=0;
+				immSel=5;
+				brUnsigned=0;
+				Asel=1;
+				Bsel=1;
+				ALUsel={3'b000,1'b0};
+				memRW=0;
+				regWen=1;
+				WBsel=1;
+				loadsize=5;
+				storesize=0;
+		end
+		bType:begin
+		case(func3)
+			beq:begin
+				if(brEq)begin
+					pcSel=1;
+					immSel=3;
+					brUnsigned=0;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=0;
+					loadsize=5;
+					storesize=0;
+				end
+				else begin
+					pcSel=0;
+					immSel=3;
+					brUnsigned=0;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+			end			
+			bne:begin
+				if(!brEq)begin
+					pcSel=1;
+					immSel=3;
+					brUnsigned=0;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+				else begin
+					pcSel=0;
+					immSel=3;
+					brUnsigned=0;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+			end
+			blt:begin
+				if(brLt)begin
+					pcSel=1;
+					immSel=3;
+					brUnsigned=0;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+				else begin
+					pcSel=0;
+					immSel=3;
+					brUnsigned=0;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+			end
+			bltu:begin
+				if(brLt)begin
+					pcSel=1;
+					immSel=3;
+					brUnsigned=1;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+				else begin
+					pcSel=0;
+					immSel=3;
+					brUnsigned=1;
+					Asel=1;
+					Bsel=1;
+					ALUsel={3'b0,1'b0};
+					memRW=0;
+					regWen=0;
+					WBsel=1;
+					loadsize=5;
+					storesize=0;
+				end
+			end
+		endcase
+		end
+		
+		jal:begin
+			pcSel=1;
+			immSel=4;
+			brUnsigned=0;
+			Asel=1;
+			Bsel=1;
+			ALUsel={3'b0,1'b0};
+			memRW=0;
+			regWen=1;
+			WBsel=2;
+			loadsize=5;
+			storesize=0;		
+		end
+		jalr:begin
+			pcSel=1;
+			immSel=0;
+			brUnsigned=0;
+			Asel=0;
+			Bsel=1;
+			ALUsel={3'b0,1'b0};
+			memRW=0;
+			regWen=1;
+			WBsel=2;
+			loadsize=5;
+			storesize=0;		
+		end
+	endcase
+end
+endmodule
